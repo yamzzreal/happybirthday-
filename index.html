@@ -1,0 +1,369 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Happy Birthday Nopi ❤️</title>
+
+    <!-- Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/style.css">
+
+    <!-- Icon -->
+    <link rel="icon" href="assets/icon.png">
+
+</head>
+<body>
+
+<!-- ================= LOADING ================= -->
+
+<div id="loading">
+
+    <div class="loader-heart">
+        ❤️
+    </div>
+
+    <h2>Preparing Your Surprise...</h2>
+
+    <p>Just a few seconds ✨</p>
+
+</div>
+
+<!-- ================= BACKGROUND ================= -->
+
+<div id="aurora"></div>
+<div id="stars"></div>
+<div id="shooting-stars"></div>
+<div id="floating-hearts"></div>
+<div id="petals"></div>
+<div id="balloons"></div>
+
+<!-- ================= MUSIC ================= -->
+
+<audio id="bgMusic" loop>
+    <source src="assets/music.mp3" type="audio/mpeg">
+</audio>
+
+<!-- ================= HERO ================= -->
+
+<section id="hero" class="page">
+
+<div class="glass-card">
+
+<span class="top-text">
+🎂 29 Juni 🎂
+</span>
+
+<h1 id="typingName"></h1>
+
+<h3>Happy Birthday ❤️</h3>
+
+<p class="hero-desc">
+
+Hari ini bukan hanya tentang bertambahnya usia.
+
+Tetapi tentang hari dimana seseorang yang sangat berarti hadir ke dunia.
+
+Dan orang itu adalah...
+
+<b>Nopi.</b>
+
+</p>
+
+<button id="openLetter">
+
+🎁 Buka Hadiah
+
+</button>
+
+</div>
+
+</section>
+
+<!-- =========================================
+     LETTER SECTION
+========================================== -->
+
+<section id="letter" class="page hidden">
+
+<div class="letter-container">
+
+<div class="envelope">
+
+<div class="letter-paper">
+
+<h2>💌 Untuk Nopi</h2>
+
+<p>
+
+Hai Nopi...
+
+Selamat ulang tahun yaa. 🎂
+
+Hari ini adalah hari yang sangat spesial, karena hari ini adalah hari dimana seseorang yang begitu berharga dilahirkan.
+
+Terima kasih sudah bertahan sejauh ini.
+
+Aku tahu mungkin ada hari-hari yang membuatmu lelah.
+
+Ada saat dimana semuanya terasa berat.
+
+Tapi kamu selalu berhasil melewatinya.
+
+Dan itu membuatku bangga.
+
+Semoga di umurmu yang sekarang...
+
+Kamu selalu diberikan kesehatan.
+
+Selalu dikelilingi oleh orang-orang yang tulus.
+
+Semoga setiap langkahmu dipenuhi kebahagiaan.
+
+Semoga semua impianmu bisa tercapai.
+
+Jangan pernah kehilangan senyummu.
+
+Karena senyummu selalu berhasil membuat dunia terasa lebih indah.
+
+Terima kasih karena sudah menjadi dirimu sendiri.
+
+Dan...
+
+Terima kasih karena pernah hadir di hidupku.
+
+❤️
+
+— Jawir
+
+</p>
+
+<button id="nextGallery">
+
+Lihat Kenangan 📸
+
+</button>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- =========================================
+     GALLERY
+========================================== -->
+
+<section id="gallery" class="page hidden">
+
+<h2>📸 Kenangan Kita</h2>
+
+<p class="gallery-text">
+
+Setiap foto mempunyai cerita.
+
+Dan setiap cerita selalu mempunyai kamu.
+
+</p>
+
+<div class="gallery-slider">
+
+<img src="assets/foto1.jpg" class="active">
+
+<img src="assets/foto2.jpg">
+
+<img src="assets/foto3.jpg">
+
+<img src="assets/foto4.jpg">
+
+</div>
+
+<div class="dots">
+
+<span class="dot active"></span>
+<span class="dot"></span>
+<span class="dot"></span>
+<span class="dot"></span>
+
+</div>
+
+<button id="nextWish">
+
+Lanjut ❤️
+
+</button>
+
+</section>
+
+<!-- =========================================
+     WISH SECTION
+========================================== -->
+
+<section id="wish" class="page hidden">
+
+<h2>✨ Doa Untuk Nopi ✨</h2>
+
+<div class="wish-box">
+
+<h3 id="wishText">
+
+Semoga panjang umur dan sehat selalu. ❤️
+
+</h3>
+
+<button id="changeWish">
+
+Doa Selanjutnya ✨
+
+</button>
+
+</div>
+
+</section>
+<!-- ================= SCROLL INDICATOR ================= -->
+
+<div class="scroll-down">
+
+<span></span>
+
+</div>
+
+<!-- ================= PARTICLES ================= -->
+
+<div id="particles"></div>
+
+<!-- ================= LIGHT EFFECT ================= -->
+
+<div class="light-left"></div>
+<div class="light-right"></div>
+
+<!-- ================= SCRIPT ================= -->
+<!-- =========================================
+     GIFT SECTION
+========================================== -->
+
+<section id="gift" class="page hidden">
+
+    <h2>🎁 Ada Hadiah Buat Kamu</h2>
+
+    <p class="gift-desc">
+        Klik kotak hadiah di bawah ini yaa...
+    </p>
+
+    <div id="giftBox">
+
+        <div class="gift-lid"></div>
+
+        <div class="gift-body"></div>
+
+        <div class="gift-ribbon-vertical"></div>
+
+        <div class="gift-ribbon-horizontal"></div>
+
+    </div>
+
+</section>
+
+<!-- =========================================
+     FINAL SECTION
+========================================== -->
+
+<section id="ending" class="page hidden">
+
+<div class="ending-card">
+
+<h1>🎂 Happy Birthday 🎂</h1>
+
+<h2>Nopi ❤️</h2>
+
+<p>
+
+Hari ini usiamu memang bertambah.
+
+Tapi semoga bersamaan dengan itu...
+
+Kebahagiaanmu juga ikut bertambah.
+
+Rezekimu semakin luas.
+
+Doamu semakin banyak yang dikabulkan.
+
+Semoga langkahmu selalu dimudahkan.
+
+Semoga semua rasa sedihmu perlahan digantikan dengan senyuman.
+
+Jangan pernah merasa sendirian.
+
+Karena akan selalu ada orang yang mendoakanmu dari jauh.
+
+Terima kasih...
+
+Karena kamu pernah hadir.
+
+Terima kasih...
+
+Karena kamu sudah menjadi seseorang yang begitu berharga.
+
+Semoga semua hal baik selalu datang menghampirimu.
+
+Selamat ulang tahun ya...
+
+❤️
+
+</p>
+
+<div class="signature">
+
+From
+
+<h3>Jawir ❤️</h3>
+
+</div>
+
+<button id="replay">
+
+🔄 Lihat Lagi
+
+</button>
+
+</div>
+
+</section>
+
+<!-- =========================================
+     FOOTER
+========================================== -->
+
+<footer>
+
+Made with ❤️ by Jawir
+
+</footer>
+
+<!-- =========================================
+     EFFECT CONTAINER
+========================================== -->
+
+<div id="confetti-container"></div>
+
+<div id="fireworks"></div>
+
+<div id="cursor-light"></div>
+
+<!-- Canvas untuk efek -->
+
+
+<!-- Library Confetti -->
+<script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.9.3/dist/confetti.browser.min.js"></script>
+
+<!-- JavaScript -->
+<script src="script.js"></script>
+
+</body>
+</html>
