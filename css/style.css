@@ -1,0 +1,1530 @@
+/* ===========================================
+   STYLE.CSS
+   PART 1
+=========================================== */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+    font-family:'Poppins',sans-serif;
+    background:#0f0a18;
+    color:#fff;
+    overflow-x:hidden;
+}
+
+/* =========================
+BACKGROUND
+========================= */
+
+#aurora{
+    position:fixed;
+    inset:0;
+    background:
+    radial-gradient(circle at 20% 20%,rgba(255,105,180,.18),transparent 35%),
+    radial-gradient(circle at 80% 10%,rgba(255,255,255,.12),transparent 30%),
+    radial-gradient(circle at 50% 90%,rgba(255,20,147,.18),transparent 35%);
+    animation:aurora 15s ease infinite alternate;
+    z-index:-6;
+}
+
+@keyframes aurora{
+
+0%{
+transform:scale(1) rotate(0deg);
+}
+
+100%{
+transform:scale(1.2) rotate(4deg);
+}
+
+}
+
+#canvas-bg{
+
+position:fixed;
+
+top:0;
+left:0;
+
+width:100%;
+height:100%;
+
+z-index:-5;
+
+pointer-events:none;
+
+}
+
+/* =========================
+STARS
+========================= */
+
+#stars{
+
+position:fixed;
+
+inset:0;
+
+background-image:
+radial-gradient(white 1px,transparent 1px);
+
+background-size:45px 45px;
+
+opacity:.35;
+
+animation:starsMove 60s linear infinite;
+
+z-index:-4;
+
+}
+
+@keyframes starsMove{
+
+from{
+
+transform:translateY(0);
+
+}
+
+to{
+
+transform:translateY(-300px);
+
+}
+
+}
+
+/* =========================
+HEARTS
+========================= */
+
+#floating-hearts,
+#shooting-stars,
+#petals,
+#balloons,
+#particles{
+
+position:fixed;
+
+inset:0;
+
+pointer-events:none;
+
+overflow:hidden;
+
+z-index:-2;
+
+}
+
+/* =========================
+LOADING
+========================= */
+
+#loading{
+
+position:fixed;
+
+top:0;
+left:0;
+
+width:100%;
+height:100%;
+
+background:#090510;
+
+display:flex;
+
+flex-direction:column;
+
+justify-content:center;
+
+align-items:center;
+
+gap:15px;
+
+z-index:99999;
+
+transition:.8s;
+
+}
+
+.loader-heart{
+
+font-size:70px;
+
+animation:beat 1s infinite;
+
+}
+
+@keyframes beat{
+
+0%{transform:scale(1);}
+50%{transform:scale(1.2);}
+100%{transform:scale(1);}
+
+}
+
+#loading h2{
+
+font-size:28px;
+
+font-weight:600;
+
+}
+
+#loading p{
+
+opacity:.8;
+
+}
+
+/* =========================
+SECTION
+========================= */
+
+section{
+
+min-height:100vh;
+
+display:flex;
+
+justify-content:center;
+
+align-items:center;
+
+padding:50px 20px;
+
+position:relative;
+
+}
+
+.hidden{
+
+display:none;
+
+}
+
+/* =========================
+GLASS CARD
+========================= */
+
+.glass-card{
+
+max-width:760px;
+
+width:100%;
+
+padding:45px;
+
+background:rgba(255,255,255,.08);
+
+backdrop-filter:blur(20px);
+
+border:1px solid rgba(255,255,255,.15);
+
+border-radius:30px;
+
+box-shadow:
+
+0 15px 40px rgba(0,0,0,.35);
+
+text-align:center;
+
+}
+
+.top-text{
+
+display:inline-block;
+
+padding:8px 20px;
+
+background:rgba(255,255,255,.1);
+
+border-radius:30px;
+
+margin-bottom:20px;
+
+font-size:14px;
+
+}
+
+#typingName{
+
+font-family:'Great Vibes',cursive;
+
+font-size:82px;
+
+margin:15px 0;
+
+color:#fff;
+
+text-shadow:
+
+0 0 20px #ff8cc8,
+
+0 0 40px #ff8cc8;
+
+}
+
+.glass-card h3{
+
+font-size:32px;
+
+margin-bottom:20px;
+
+}
+
+.hero-desc{
+
+font-size:18px;
+
+line-height:1.9;
+
+opacity:.92;
+
+white-space:pre-line;
+
+}
+
+/* =========================
+BUTTON
+========================= */
+
+button{
+
+padding:16px 40px;
+
+margin-top:35px;
+
+border:none;
+
+border-radius:40px;
+
+background:linear-gradient(135deg,#ff4fa1,#ff7ac8);
+
+color:#fff;
+
+font-size:17px;
+
+font-weight:600;
+
+cursor:pointer;
+
+transition:.35s;
+
+box-shadow:
+
+0 10px 25px rgba(255,105,180,.35);
+
+}
+
+button:hover{
+
+transform:translateY(-5px);
+
+box-shadow:
+
+0 20px 35px rgba(255,105,180,.45);
+
+}
+
+/* =========================
+LIGHT EFFECT
+========================= */
+
+.light-left,
+.light-right{
+
+position:fixed;
+
+width:350px;
+
+height:350px;
+
+border-radius:50%;
+
+filter:blur(120px);
+
+pointer-events:none;
+
+z-index:-3;
+
+}
+
+.light-left{
+
+left:-120px;
+
+top:100px;
+
+background:#ff4fa1;
+
+}
+
+.light-right{
+
+right:-120px;
+
+bottom:100px;
+
+background:#ff9fd6;
+
+}
+
+/* =========================
+SCROLL
+========================= */
+
+.scroll-down{
+
+position:absolute;
+
+bottom:30px;
+
+left:50%;
+
+transform:translateX(-50%);
+
+}
+
+.scroll-down span{
+
+display:block;
+
+width:28px;
+
+height:45px;
+
+border:2px solid white;
+
+border-radius:20px;
+
+position:relative;
+
+}
+
+.scroll-down span::before{
+
+content:"";
+
+position:absolute;
+
+width:6px;
+
+height:6px;
+
+background:white;
+
+border-radius:50%;
+
+left:50%;
+
+top:8px;
+
+transform:translateX(-50%);
+
+animation:scroll 1.5s infinite;
+
+}
+
+@keyframes scroll{
+
+0%{
+opacity:0;
+top:8px;
+}
+
+100%{
+opacity:1;
+top:24px;
+}
+
+}
+
+/* =========================
+RESPONSIVE
+========================= */
+
+@media(max-width:768px){
+
+#typingName{
+
+font-size:58px;
+
+}
+
+.glass-card{
+
+padding:30px;
+
+}
+
+.hero-desc{
+
+font-size:16px;
+
+}
+
+button{
+
+width:100%;
+
+}
+
+}
+
+/* ===========================================
+   STYLE.CSS
+   PART 2A
+   Letter + Gallery
+=========================================== */
+
+/* =========================
+   LETTER SECTION
+========================= */
+
+#letter{
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    padding:80px 20px;
+}
+
+.letter-container{
+    width:100%;
+    max-width:900px;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+}
+
+.envelope{
+    width:100%;
+    position:relative;
+    padding:15px;
+    border-radius:30px;
+    background:linear-gradient(
+        135deg,
+        rgba(255,182,193,.18),
+        rgba(255,255,255,.08)
+    );
+    backdrop-filter:blur(18px);
+    border:1px solid rgba(255,255,255,.15);
+    box-shadow:
+        0 20px 45px rgba(0,0,0,.35),
+        0 0 35px rgba(255,105,180,.12);
+}
+
+.letter-paper{
+    background:rgba(255,255,255,.95);
+    color:#444;
+    border-radius:22px;
+    padding:45px;
+    box-shadow:0 10px 30px rgba(0,0,0,.15);
+    animation:paperShow .8s ease;
+}
+
+@keyframes paperShow{
+    from{
+        transform:translateY(40px) scale(.95);
+        opacity:0;
+    }
+    to{
+        transform:translateY(0) scale(1);
+        opacity:1;
+    }
+}
+
+.letter-paper h2{
+    color:#ff4fa1;
+    text-align:center;
+    margin-bottom:25px;
+    font-size:34px;
+}
+
+.letter-paper p{
+    white-space:pre-line;
+    line-height:2;
+    font-size:17px;
+    text-align:justify;
+}
+
+.letter-paper button{
+    display:block;
+    margin:40px auto 0;
+}
+
+/* =========================
+   GALLERY
+========================= */
+
+#gallery{
+    flex-direction:column;
+    text-align:center;
+}
+
+#gallery h2{
+    font-size:42px;
+    margin-bottom:15px;
+}
+
+.gallery-text{
+    max-width:700px;
+    opacity:.85;
+    margin-bottom:35px;
+    line-height:1.8;
+}
+
+.gallery-slider{
+    width:100%;
+    max-width:900px;
+    height:520px;
+    position:relative;
+    overflow:hidden;
+    border-radius:28px;
+    background:rgba(255,255,255,.08);
+    padding:12px;
+    backdrop-filter:blur(18px);
+    border:1px solid rgba(255,255,255,.15);
+    box-shadow:
+        0 20px 45px rgba(0,0,0,.35);
+}
+
+.gallery-slider img{
+    position:absolute;
+    inset:12px;
+    width:calc(100% - 24px);
+    height:calc(100% - 24px);
+    object-fit:cover;
+    border-radius:20px;
+    opacity:0;
+    transition:opacity .8s ease,
+               transform .8s ease;
+    transform:scale(1.08);
+}
+
+.gallery-slider img.active{
+    opacity:1;
+    transform:scale(1);
+}
+
+.gallery-slider img:hover{
+    transform:scale(1.03);
+}
+
+/* =========================
+   DOTS
+========================= */
+
+.dots{
+    display:flex;
+    justify-content:center;
+    gap:12px;
+    margin:25px 0;
+}
+
+.dot{
+    width:14px;
+    height:14px;
+    border-radius:50%;
+    background:rgba(255,255,255,.35);
+    transition:.3s;
+}
+
+.dot.active{
+    width:34px;
+    border-radius:20px;
+    background:#ff6bb5;
+    box-shadow:0 0 15px rgba(255,107,181,.6);
+}
+
+/* =========================
+   GALLERY BUTTON
+========================= */
+
+#nextWish{
+    margin-top:20px;
+}
+
+/* =========================
+   RESPONSIVE
+========================= */
+
+@media(max-width:768px){
+
+    .letter-paper{
+        padding:28px;
+    }
+
+    .letter-paper h2{
+        font-size:28px;
+    }
+
+    .letter-paper p{
+        font-size:15px;
+        line-height:1.9;
+    }
+
+    .gallery-slider{
+        height:320px;
+    }
+
+    #gallery h2{
+        font-size:30px;
+    }
+
+    .gallery-text{
+        font-size:15px;
+    }
+
+}
+
+/* ===========================================
+   STYLE.CSS
+   PART 2B
+   Wish + Gift + Ending
+=========================================== */
+
+/* =========================
+   WISH SECTION
+========================= */
+
+#wish{
+    flex-direction:column;
+    text-align:center;
+    padding:80px 20px;
+}
+
+#wish h2{
+    font-size:42px;
+    margin-bottom:35px;
+}
+
+.wish-box{
+    width:100%;
+    max-width:700px;
+    padding:45px;
+    border-radius:30px;
+    background:rgba(255,255,255,.08);
+    backdrop-filter:blur(20px);
+    border:1px solid rgba(255,255,255,.15);
+    box-shadow:
+        0 20px 45px rgba(0,0,0,.35),
+        0 0 30px rgba(255,105,180,.12);
+}
+
+#wishText{
+    min-height:120px;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    font-size:28px;
+    line-height:1.7;
+    text-shadow:0 0 15px rgba(255,255,255,.25);
+}
+
+#changeWish{
+    margin-top:30px;
+}
+
+/* =========================
+   GIFT SECTION
+========================= */
+
+#gift{
+    flex-direction:column;
+    text-align:center;
+}
+
+.gift-desc{
+    opacity:.85;
+    margin:15px 0 40px;
+}
+
+#giftBox{
+    width:180px;
+    height:180px;
+    position:relative;
+    cursor:pointer;
+    transition:.35s;
+    animation:giftFloat 3s ease-in-out infinite;
+}
+
+#giftBox:hover{
+    transform:scale(1.08) rotate(-2deg);
+}
+
+@keyframes giftFloat{
+    0%,100%{
+        transform:translateY(0);
+    }
+    50%{
+        transform:translateY(-12px);
+    }
+}
+
+.gift-body{
+    position:absolute;
+    bottom:0;
+    width:100%;
+    height:130px;
+    background:#ff6bb5;
+    border-radius:0 0 14px 14px;
+}
+
+.gift-lid{
+    position:absolute;
+    top:0;
+    width:100%;
+    height:55px;
+    background:#ff4fa1;
+    border-radius:12px;
+}
+
+.gift-ribbon-vertical{
+    position:absolute;
+    left:50%;
+    transform:translateX(-50%);
+    width:18px;
+    height:100%;
+    background:#fff;
+}
+
+.gift-ribbon-horizontal{
+    position:absolute;
+    top:42px;
+    width:100%;
+    height:18px;
+    background:#fff;
+}
+
+/* =========================
+   ENDING
+========================= */
+
+#ending{
+    text-align:center;
+    flex-direction:column;
+    padding:80px 20px;
+}
+
+.ending-card{
+    width:100%;
+    max-width:850px;
+    padding:50px;
+    border-radius:30px;
+    background:rgba(255,255,255,.08);
+    backdrop-filter:blur(20px);
+    border:1px solid rgba(255,255,255,.15);
+    box-shadow:
+        0 20px 50px rgba(0,0,0,.35);
+}
+
+.ending-card h1{
+    font-family:'Great Vibes',cursive;
+    font-size:78px;
+    color:#fff;
+    text-shadow:
+        0 0 20px #ff8cc8,
+        0 0 45px #ff8cc8;
+}
+
+.ending-card h2{
+    font-size:38px;
+    margin:15px 0 30px;
+}
+
+.ending-card p{
+    white-space:pre-line;
+    line-height:2;
+    font-size:18px;
+}
+
+.signature{
+    margin-top:35px;
+    font-size:20px;
+    opacity:.9;
+}
+
+.signature h3{
+    margin-top:10px;
+    font-family:'Great Vibes',cursive;
+    font-size:46px;
+    color:#ff8cc8;
+}
+
+/* =========================
+   FOOTER
+========================= */
+
+footer{
+    text-align:center;
+    padding:25px;
+    color:rgba(255,255,255,.7);
+    font-size:15px;
+}
+
+/* =========================
+   EFFECT LAYERS
+========================= */
+
+#confetti-container,
+#fireworks,
+#cursor-light{
+    position:fixed;
+    inset:0;
+    pointer-events:none;
+}
+
+#cursor-light{
+    width:24px;
+    height:24px;
+    border-radius:50%;
+    background:rgba(255,255,255,.45);
+    filter:blur(10px);
+    transform:translate(-50%,-50%);
+    z-index:999;
+}
+
+/* =========================
+   FADE ANIMATION
+========================= */
+
+.fade-in{
+    animation:fadeIn .8s ease;
+}
+
+@keyframes fadeIn{
+    from{
+        opacity:0;
+        transform:translateY(25px);
+    }
+    to{
+        opacity:1;
+        transform:translateY(0);
+    }
+}
+
+/* =========================
+   RESPONSIVE
+========================= */
+
+@media(max-width:768px){
+
+    #wish h2{
+        font-size:30px;
+    }
+
+    .wish-box{
+        padding:30px;
+    }
+
+    #wishText{
+        font-size:22px;
+        min-height:100px;
+    }
+
+    #giftBox{
+        width:140px;
+        height:140px;
+    }
+
+    .gift-body{
+        height:100px;
+    }
+
+    .gift-lid{
+        height:42px;
+    }
+
+    .gift-ribbon-horizontal{
+        top:32px;
+    }
+
+    .ending-card{
+        padding:30px;
+    }
+
+    .ending-card h1{
+        font-size:52px;
+    }
+
+    .ending-card h2{
+        font-size:28px;
+    }
+
+    .ending-card p{
+        font-size:16px;
+    }
+
+    .signature h3{
+        font-size:36px;
+    }
+
+}
+
+/* ===========================================
+   STYLE.CSS
+   PART 3A
+   PREMIUM EFFECTS
+=========================================== */
+
+/* =========================
+   BUTTON SHINE
+========================= */
+
+button{
+    position:relative;
+    overflow:hidden;
+}
+
+button::before{
+    content:"";
+    position:absolute;
+    top:0;
+    left:-120%;
+    width:60%;
+    height:100%;
+    background:rgba(255,255,255,.35);
+    transform:skewX(-25deg);
+    transition:.7s;
+}
+
+button:hover::before{
+    left:160%;
+}
+
+/* =========================
+   GLASS HOVER
+========================= */
+
+.glass-card,
+.wish-box,
+.letter-paper,
+.ending-card,
+.envelope{
+
+transition:
+transform .35s,
+box-shadow .35s;
+
+}
+
+.glass-card:hover,
+.wish-box:hover,
+.letter-paper:hover,
+.ending-card:hover,
+.envelope:hover{
+
+transform:translateY(-8px);
+
+box-shadow:
+
+0 30px 60px rgba(0,0,0,.45),
+
+0 0 35px rgba(255,105,180,.15);
+
+}
+
+/* =========================
+   IMAGE HOVER
+========================= */
+
+.gallery-slider img{
+
+transition:
+
+opacity .8s,
+
+transform .8s,
+
+filter .8s;
+
+}
+
+.gallery-slider img:hover{
+
+transform:scale(1.05);
+
+filter:brightness(1.05);
+
+}
+
+/* =========================
+   TITLE GLOW
+========================= */
+
+h1,h2{
+
+text-shadow:
+
+0 0 10px rgba(255,255,255,.2),
+
+0 0 25px rgba(255,105,180,.25);
+
+}
+
+/* =========================
+   HERO FLOAT
+========================= */
+
+.glass-card{
+
+animation:heroFloat 5s ease-in-out infinite;
+
+}
+
+@keyframes heroFloat{
+
+0%,100%{
+
+transform:translateY(0);
+
+}
+
+50%{
+
+transform:translateY(-10px);
+
+}
+
+}
+
+/* =========================
+   HEART PARTICLE
+========================= */
+
+.heart{
+
+position:fixed;
+
+font-size:22px;
+
+animation:heartFly linear forwards;
+
+pointer-events:none;
+
+z-index:-1;
+
+filter:drop-shadow(0 0 10px pink);
+
+}
+
+@keyframes heartFly{
+
+0%{
+
+transform:
+
+translateY(0)
+
+scale(.5);
+
+opacity:0;
+
+}
+
+20%{
+
+opacity:1;
+
+}
+
+100%{
+
+transform:
+
+translateY(-120vh)
+
+translateX(60px)
+
+scale(1.4);
+
+opacity:0;
+
+}
+
+}
+
+/* =========================
+   STAR
+========================= */
+
+.star{
+
+position:fixed;
+
+width:3px;
+
+height:3px;
+
+background:white;
+
+border-radius:50%;
+
+box-shadow:
+
+0 0 10px white,
+
+0 0 20px white;
+
+animation:twinkle 2s infinite alternate;
+
+}
+
+@keyframes twinkle{
+
+from{
+
+opacity:.2;
+
+transform:scale(.6);
+
+}
+
+to{
+
+opacity:1;
+
+transform:scale(1.3);
+
+}
+
+}
+
+/* =========================
+   PAGE SHOW
+========================= */
+
+.page{
+
+animation:pageFade .8s ease;
+
+}
+
+@keyframes pageFade{
+
+from{
+
+opacity:0;
+
+transform:translateY(40px);
+
+}
+
+to{
+
+opacity:1;
+
+transform:translateY(0);
+
+}
+
+}
+
+/* =========================
+   SCROLLBAR
+========================= */
+
+::-webkit-scrollbar{
+
+width:10px;
+
+}
+
+::-webkit-scrollbar-track{
+
+background:#160d22;
+
+}
+
+::-webkit-scrollbar-thumb{
+
+background:#ff5fb2;
+
+border-radius:20px;
+
+}
+
+::-webkit-scrollbar-thumb:hover{
+
+background:#ff89c8;
+
+}
+
+/* =========================
+   RESPONSIVE
+========================= */
+
+@media(max-width:768px){
+
+.glass-card:hover,
+.wish-box:hover,
+.letter-paper:hover,
+.ending-card:hover{
+
+transform:none;
+
+}
+
+button{
+
+font-size:15px;
+
+padding:15px 28px;
+
+}
+
+}
+
+/* ===========================================
+   STYLE.CSS
+   PART 3B
+   PREMIUM ANIMATIONS
+=========================================== */
+
+/* =========================
+   FLOATING BALLOON
+========================= */
+
+.balloon{
+    position:fixed;
+    bottom:-180px;
+    width:60px;
+    height:75px;
+    border-radius:50%;
+    pointer-events:none;
+    animation:balloonFly linear forwards;
+    box-shadow:
+        inset -8px -10px rgba(255,255,255,.25),
+        0 12px 20px rgba(0,0,0,.25);
+}
+
+.balloon::before{
+    content:"";
+    position:absolute;
+    bottom:-10px;
+    left:50%;
+    transform:translateX(-50%);
+    border-left:7px solid transparent;
+    border-right:7px solid transparent;
+    border-top:12px solid currentColor;
+}
+
+.balloon::after{
+    content:"";
+    position:absolute;
+    left:50%;
+    top:75px;
+    width:2px;
+    height:80px;
+    background:rgba(255,255,255,.7);
+}
+
+@keyframes balloonFly{
+    0%{
+        transform:translateY(0) rotate(0deg);
+        opacity:0;
+    }
+    10%{
+        opacity:1;
+    }
+    100%{
+        transform:translateY(-140vh) translateX(40px) rotate(8deg);
+        opacity:0;
+    }
+}
+
+/* =========================
+   SAKURA PETALS
+========================= */
+
+.petal{
+    position:fixed;
+    top:-40px;
+    font-size:22px;
+    pointer-events:none;
+    animation:petalFall linear forwards;
+    filter:drop-shadow(0 0 8px pink);
+}
+
+@keyframes petalFall{
+    0%{
+        transform:translateY(0) rotate(0deg);
+        opacity:0;
+    }
+    20%{
+        opacity:1;
+    }
+    100%{
+        transform:
+            translateY(120vh)
+            translateX(100px)
+            rotate(540deg);
+        opacity:0;
+    }
+}
+
+/* =========================
+   SHOOTING STAR
+========================= */
+
+.shooting-star{
+    position:fixed;
+    width:180px;
+    height:2px;
+    background:
+    linear-gradient(90deg,#fff,transparent);
+    transform:rotate(-35deg);
+    pointer-events:none;
+    animation:shootingStar 2.5s linear forwards;
+}
+
+@keyframes shootingStar{
+    from{
+        transform:
+            translate(-250px,-200px)
+            rotate(-35deg);
+        opacity:0;
+    }
+    15%{
+        opacity:1;
+    }
+    to{
+        transform:
+            translate(1700px,900px)
+            rotate(-35deg);
+        opacity:0;
+    }
+}
+
+/* =========================
+   SPARKLE
+========================= */
+
+.sparkle{
+    position:fixed;
+    width:8px;
+    height:8px;
+    border-radius:50%;
+    background:#fff;
+    pointer-events:none;
+    box-shadow:
+        0 0 10px #fff,
+        0 0 20px #fff,
+        0 0 35px pink;
+    animation:sparkle 1.3s linear forwards;
+}
+
+@keyframes sparkle{
+    from{
+        transform:scale(.3);
+        opacity:0;
+    }
+    20%{
+        opacity:1;
+    }
+    to{
+        transform:
+            translateY(-60px)
+            scale(2);
+        opacity:0;
+    }
+}
+
+/* =========================
+   CURSOR GLOW
+========================= */
+
+#cursor-light{
+    position:fixed;
+    width:24px;
+    height:24px;
+    border-radius:50%;
+    background:rgba(255,255,255,.45);
+    filter:blur(12px);
+    pointer-events:none;
+    z-index:9999;
+    transition:
+        transform .08s linear,
+        opacity .2s;
+}
+
+/* =========================
+   ENDING TITLE EFFECT
+========================= */
+
+.ending-card h1{
+    animation:endingGlow 3s infinite alternate;
+}
+
+@keyframes endingGlow{
+    from{
+        text-shadow:
+            0 0 10px #fff,
+            0 0 20px #ff8cc8;
+    }
+    to{
+        text-shadow:
+            0 0 20px #fff,
+            0 0 40px #ff69b4,
+            0 0 70px #ff1493;
+    }
+}
+
+/* =========================
+   GIFT PULSE
+========================= */
+
+#giftBox::after{
+    content:"";
+    position:absolute;
+    inset:-15px;
+    border-radius:18px;
+    border:2px solid rgba(255,255,255,.2);
+    animation:giftPulse 2s infinite;
+}
+
+@keyframes giftPulse{
+    0%{
+        transform:scale(.9);
+        opacity:.6;
+    }
+    100%{
+        transform:scale(1.2);
+        opacity:0;
+    }
+}
+
+/* =========================
+   MOBILE
+========================= */
+
+@media(max-width:768px){
+
+    .balloon{
+        width:45px;
+        height:58px;
+    }
+
+    .balloon::after{
+        height:60px;
+    }
+
+    .shooting-star{
+        width:120px;
+    }
+
+    .petal{
+        font-size:18px;
+    }
+
+}
